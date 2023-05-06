@@ -1,0 +1,58 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: 2.5rem;
+    background-color: black;
+}
+#content{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;
+}
+/* #sketchPadContainer{
+    height: 60%;
+    width: 30%;
+    margin: auto;
+    background-color: whitesmoke;
+} */
+
+button{
+    width: 5rem;
+    
+    cursor:pointer;
+    color: white;
+    background-color: rgb(29, 29, 152);
+    /* border-radius: 45%; */
+    margin:1rem;
+    border-style: double;
+    border-width: 0.2rem;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: navy;
+}
+button:disabled{
+    background-color: gray;
+}
+
+/* button::first-letter{
+    font-size: 1.2rem;
+} */
+
+div{
+    background-color: whitesmoke;
+    
+}
+
+/* label{
+    height: 4rem;
+} */
+input{
+    font-size: 2rem;
+    height: 4rem;
+}

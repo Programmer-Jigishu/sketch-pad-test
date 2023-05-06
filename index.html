@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=0.9,user-scalable=0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ML</title>
+</head>
+
+<body>
+    <div id="disappear">
+        <label >Enter Your Name
+            <input type="text" id="pName" name="pName" placeholder="ex. Jigishu" >
+            <button id="advanceBtn" onclick="start();">Start Drawing</button>
+
+        </label>
+    </div>
+    <div id="content" style="visibility: hidden;">
+        <p>Sketch it Here!</p>
+        <br>
+        <div id = "sketchPadContainer" ></div>
+    </div>
+
+    <script src = "js/sketchPad.js"></script>
+    <script src = "js/draw.js"></script>
+
+
+    <script>
+        const sketchPad = new SketchPad(sketchPadContainer);
+        const data = {
+            name :null,
+            session: new Date().getTime(),
+            drawing :{}
+        };
+
+        function start(){
+            if (pName.value==""){
+                alert("Please Type a Valid Name in Name Field.")
+                return;
+            }
+            data.name = pName.value;
+            // Important
+            disappear.style.display = "none";
+            content.style.visibility="visible";
+
+        }
+    </script>
+</body>
+</html>
